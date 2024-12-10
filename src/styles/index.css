@@ -27,6 +27,10 @@
   transform: rotate(-90deg);
 }
 
+.treeSelect_toggle.active svg {
+  transform: rotate(0deg);
+}
+
 .treeSelect_selectable {
   flex-grow: 1;
   display: flex;
@@ -68,14 +72,13 @@
 .treeSelect_title {
   padding-left: 24px;
   padding-top: 5px;
+  max-height: 300px;
+  margin-bottom: 10px;
+  overflow-y: scroll;
 }
 
 .treeSelect_node {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  border-radius: 6px;
-  padding: 6px;
+  padding: 2px;
 }
 
 .treeSelect_node svg {
@@ -84,8 +87,20 @@
   flex-shrink: 0;
 }
 
-.treeSelect_node:hover, .treeSelect_node.active {
-  background-color: rgb(243 244 246 / 1);
+.treeSelect_node_item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+.treeSelect_node_item:hover, .treeSelect_node_item.active {
+  background-color: rgb(191 191 191);
+}
+
+.treeSelect_node_item:hover .treeSelect_title_text, .treeSelect_node_item.active .treeSelect_title_text {
+  color: #fff
 }
 
 .treeSelect_title_text {
