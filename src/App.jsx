@@ -3,6 +3,8 @@ import { Link, Outlet } from 'react-router-dom';
 import CounterClass from './pages/CounterClass';
 import TreeSeletPure from './components/TreeSeletPure';
 
+import StopWatchRef from './pages/RefHook';
+
 function App() {
   
   return (
@@ -12,10 +14,10 @@ function App() {
             <ul className="space-y-2 font-medium">
               <li className="ms-3">
                 <Link 
-                  to="dashboard" 
+                  to="/ref-hook" 
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
-                  Dashboard
+                  Ref Hook
                 </Link>
               </li> 
             </ul>
@@ -26,22 +28,6 @@ function App() {
           <Outlet />
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       <ul>
         <li><Link to="/">App</Link></li>

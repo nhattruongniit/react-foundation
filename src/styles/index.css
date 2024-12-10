@@ -126,3 +126,18 @@
   top: 0;
   left: 10px;
 }
+
+.manipulating_content {
+  width: 600px;
+  overflow: hidden;
+}
+
+.manipulating li {
+  display: inline;
+  padding: 0.5rem;
+  white-space: nowrap;
+}
+
+.manipulating li img {
+  display: inline;
+}
