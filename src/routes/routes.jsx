@@ -10,6 +10,7 @@ import Login from '../pages/Login.jsx';
 import Register from '../pages/Register.jsx';
 import AuthLayout from '../layouts/AuthLayout.jsx';
 import RefHook from '../pages/RefHook.jsx';
+import UseActionState from '../pages/UseActionState.jsx';
 
 // setting router
 export const router = createBrowserRouter([
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
       {
         path: 'ref-hook',
         element: <RefHook />
+      },
+      {
+        path: 'use-action-state',
+        element: <UseActionState />
       },
       {
         element: <AuthLayout />,

@@ -141,3 +141,8 @@
 .manipulating li img {
   display: inline;
 }
+
+.menubar li a.active {
+  background-color: rgb(243 244 246 / 1);
+  color: rgb(17 24 39 / 1);
+}

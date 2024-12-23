@@ -1,4 +1,4 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 
 import CounterClass from './pages/CounterClass';
 import TreeSeletPure from './components/TreeSeletPure';
@@ -11,14 +11,22 @@ function App() {
     <>
       <aside id="default-sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-            <ul className="space-y-2 font-medium">
+            <ul className="space-y-2 font-medium menubar">
               <li className="ms-3">
-                <Link 
+                <NavLink 
                   to="/ref-hook" 
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
                   Ref Hook
-                </Link>
+                </NavLink>
+              </li> 
+              <li className="ms-3">
+                <NavLink 
+                  to="/use-action-state" 
+                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  UseActionState
+                </NavLink>
               </li> 
             </ul>
         </div>
