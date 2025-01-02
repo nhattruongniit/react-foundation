@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ManuallyForm() {
+function FormWithManually() {
   return (
     <>
       <h2 className="font-semibold text-xl text-gray-600 mb-2">Manually Form With React</h2>
@@ -13,7 +13,7 @@ function ManuallyForm() {
             <form className="lg:col-span-2">
               <div className="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
                 <div className="md:col-span-3">
-                  <label for="first_name">First Name</label>
+                  <label htmlFor="first_name">First Name</label>
                   <input
                     type="text"
                     name="first_name"
@@ -22,7 +22,7 @@ function ManuallyForm() {
                   />
                 </div>
                 <div className="md:col-span-2">
-                  <label for="last_name">Last Name</label>
+                  <label htmlFor="last_name">Last Name</label>
                   <input
                     type="text"
                     name="last_name"
@@ -32,7 +32,7 @@ function ManuallyForm() {
                 </div>
 
                 <div className="md:col-span-5">
-                  <label for="email">Email Address</label>
+                  <label htmlFor="email">Email Address</label>
                   <input
                     type="text"
                     name="email"
@@ -43,7 +43,7 @@ function ManuallyForm() {
                 </div>
 
                 <div className="md:col-span-5">
-                  <label for="city">Role</label>
+                  <label htmlFor="city">Role</label>
                   <select
                     id="role"
                     className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
@@ -72,4 +72,4 @@ function ManuallyForm() {
   )
 }
 
-export default ManuallyForm
+export default FormWithManually

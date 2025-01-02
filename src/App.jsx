@@ -22,10 +22,18 @@ function App() {
               </li> 
               <li className="ms-3">
                 <NavLink 
-                  to="/use-action-state" 
+                  to="/form-with-manually" 
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
-                  UseActionState
+                  Form With Manually React
+                </NavLink>
+              </li> 
+              <li className="ms-3">
+                <NavLink 
+                  to="/form-with-use-action-state" 
+                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  Form With useActionState
                 </NavLink>
               </li> 
             </ul>

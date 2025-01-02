@@ -10,7 +10,8 @@ import Login from '../pages/Login.jsx';
 import Register from '../pages/Register.jsx';
 import AuthLayout from '../layouts/AuthLayout.jsx';
 import RefHook from '../pages/RefHook.jsx';
-import UseActionState from '../pages/UseActionState.jsx';
+import FormWithUseActionState from '../pages/FormWithUseActionState.jsx';
+import FormWithManually from '../pages/FormWithManually.jsx';
 
 // setting router
 export const router = createBrowserRouter([
@@ -36,8 +37,12 @@ export const router = createBrowserRouter([
         element: <RefHook />
       },
       {
-        path: 'use-action-state',
-        element: <UseActionState />
+        path: 'form-with-manually',
+        element: <FormWithManually />
+      },
+      {
+        path: 'form-with-use-action-state',
+        element: <FormWithUseActionState />
       },
       {
         element: <AuthLayout />,
