@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
         path: 'dashboard',
         element: <Dashboard />,
         loader: ({ request }) => {
-          return fetch('https://dummyjson.com/carts', {
+          return fetch('https://dummyjson.com/carts?limit=10', {
             signal: request.signal
           })
         }
