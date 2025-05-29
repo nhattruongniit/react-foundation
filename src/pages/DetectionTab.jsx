@@ -11,7 +11,7 @@ function DetectionTab() {
   const startInactiveTimer = () => {
     timeoutRef.current = setInterval(() => {
       setKeepAlive(prevState => prevState + 1);
-    }, 5000);
+    }, 5000 * 2);
   }
 
   const callApi = () => {
@@ -51,7 +51,7 @@ function DetectionTab() {
       <li>
         <div>
           Tab Browser: <b>{isActiveTab ? 'Active' : 'Inactive'}</b> |  Message: {numberMessage}  <br />
-          Inactive than 5s: {keepAlive} trigger api to keep alive<br />
+          Inactive than 10s: {keepAlive} trigger api to keep alive<br />
         </div>
       </li>
     </ul>
