@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
 import CounterClass from './pages/CounterClass';
 import TreeSeletPure from './components/TreeSeletPure';
@@ -43,6 +43,14 @@ function App() {
                   className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
                 >
                   Dashboard
+                </NavLink>
+              </li> 
+              <li className="ms-3">
+                <NavLink 
+                  to="/detection-tab" 
+                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  Detection Tab
                 </NavLink>
               </li> 
             </ul>

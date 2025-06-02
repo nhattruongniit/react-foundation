@@ -1,20 +1,6 @@
 import React from 'react'
-import DetectionTab from '../pages/DetectionTab.jsx';
-
-import { useDate } from '../hooks/useDate.js';
-
-const awaitTime = (time = 3000) => {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve();
-    }, time)
-  })
-}
 
 function Topbar() {
-  // show time
-  const { date} = useDate();
-
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -30,10 +16,6 @@ function Topbar() {
             React
           </span>
         </div>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <div>Show time: {date}</div>
-          <DetectionTab />
-        </div>
       </div>
     </nav>
 
@@ -41,18 +23,3 @@ function Topbar() {
 }
 
 export default Topbar
-
-
-/*
-solution 1: socket
-- server open socket
-- fe receive socket and update latest data
-
-solution 2: server sent event
-- cons: just read server, not sent
-- BE should be return event steam (listen end point BE)
-
-solution 3: BE cache in x time
-
-
-*/
