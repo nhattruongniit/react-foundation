@@ -1,5 +1,7 @@
 import { useLoaderData } from "react-router";
 
+import withWallet from "../hoc/withWallet";
+
 // async function loader({ request }) {
 //   console.log('request: ', request)
 //   return {
@@ -7,8 +9,9 @@ import { useLoaderData } from "react-router";
 //   }
 // }
 
-function Dashboard() {
+function Dashboard(props) {
   const dataSource = useLoaderData();
+  console.log('Dashboard props: ', props)
   return (
     <div className="relative overflow-x-auto">
       <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -40,4 +43,6 @@ function Dashboard() {
   )
 }
 
-export default Dashboard
+const DashboardHOC = withWallet(Dashboard)
+
+export default DashboardHOC
