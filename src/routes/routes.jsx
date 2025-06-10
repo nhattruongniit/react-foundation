@@ -12,7 +12,7 @@ import AuthLayout from '../layouts/AuthLayout.jsx';
 import RefHook from '../pages/RefHook.jsx';
 import FormWithUseActionState from '../pages/FormWithUseActionState.jsx';
 import FormWithManually from '../pages/FormWithManually.jsx';
-import DetectionTab from '../pages/DetectionTab.jsx';
+import DetectionTabClass from '../pages/DetectionTabClass.jsx';
 
 // setting router
 export const router = createBrowserRouter([
@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'detection-tab',
-        element: <DetectionTab />
+        element: <DetectionTabClass />
       },
       {
         element: <AuthLayout />,

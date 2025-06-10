@@ -61,7 +61,6 @@ function App() {
         <div className="p-4">
           <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
             <Outlet />
-            <input class="standard-input" disabled value="http://localhost:5173/en-th/promotion?promoId=55&amp;promoType=%E0%B8%9C%E0%B8%B9%E0%B9%89%E0%B9%84%E0%B8%8A%E0%B9%89%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88&amp;lang=EN_TH" />
           </div>
         </div>
       </div>
