@@ -1,12 +1,10 @@
 export const createDetectionActivity = ({ 
-    callbackKeepAlive = () => {},
     ACTIVE_TAB = 1000, // 1s
     KEEP_ALIVE = 10 * 1000, // 10s
 } = {}) => {
     let activeInterval = null;
     let keepAliveInterval = null; 
     let isFirstMount = true;
-    let isSubscribed = false;
     const listenersCallbackActiveTab = [];
     const listenersCallbackKeepAlive = [];
 
@@ -95,8 +93,6 @@ export const createDetectionActivity = ({
     }
     
     const subscribe = () => {
-        if (isSubscribed) return;
-
         const interactionEvents = ['touchstart', 'touchend', 'click', 'scroll'];
         interactionEvents.forEach(event => {
             document.addEventListener(event, handleUserInteraction, { passive: true });
@@ -114,13 +110,9 @@ export const createDetectionActivity = ({
         } else {
             startActiveMode();
         }
-
-        isSubscribed = true;
     }
 
     const unsubscribe = () => {
-        if (!isSubscribed) return;
-
         const interactionEvents = ['touchstart', 'touchend', 'click', 'scroll'];
         interactionEvents.forEach(event => {
             document.removeEventListener(event, handleUserInteraction);
@@ -133,8 +125,8 @@ export const createDetectionActivity = ({
         window.removeEventListener('focus', handleTabFocus);
 
         clearAllIntervals();
-        isSubscribed = false;
     }
+
 
     return {
         subscribe,

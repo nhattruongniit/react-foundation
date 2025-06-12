@@ -13,20 +13,16 @@ function DetectionTabFactory() {
 
     useEffect(() => {
         const activityDetectorMessage = createDetectionActivity();
-
         activityDetectorMessage.onCallbackActiveTab(() => {
             console.log('Triggering api unread message after 3mins');
-
             setTabState(TAB_STATES.ACTIVE);
             setMessageCount(prev => prev + 1);
         })
-
         activityDetectorMessage.onKeepAlive(() => {
             console.log('Triggering api keep alive after 5mins');
             setTabState(TAB_STATES.INACTIVE);
             setKeepAliveCount(prev => prev + 1);
         })
-
         activityDetectorMessage.subscribe();
 
         return () => {
